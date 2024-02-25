@@ -1,0 +1,26 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>登录</title>
+</head>
+<body>
+<h1>登录</h1>
+<div th:if="${param.error}">您输入的账号或密码有误，请重新输入</div>
+<form th:action="@{/login}" method="post">
+    <div>
+        <label>
+            <input type="text" name="name" placeholder="请输入用户名"/>
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="password" name="password" placeholder="请输入密码"/>
+        </label>
+    </div>
+
+    <label>
+        <input type="submit" value="登录"/>
+    </label>
+
+</form>
+</body>
+</html>
